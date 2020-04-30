@@ -14,11 +14,9 @@ import java.util.List;
 
 public class Test2 {
 
-    public InputStream in;
-    
     @Test
     public  void run2() throws Exception {
-        in = Resources.getResourceAsStream("SqlMapConfig.xml");
+        InputStream in = Resources.getResourceAsStream("SqlMapConfig.xml");
         SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(in);
 
         SqlSession session = factory.openSession();
